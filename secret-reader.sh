@@ -13,7 +13,7 @@ else
 fi
 
 export MYSQL_ROOT_PASSWORD=$ROOT_PASSWORD
-rm /secrets/mysql-secret.txt
+rm /secrets/mysql-secret.txt    # this is the location where password is saved 
 
 exec /usr/local/bin/docker-entrypoint.sh mysqld  # this is mysql entry point, after complection of mqsql-secret.txt mysql will execute
 
